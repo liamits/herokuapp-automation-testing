@@ -1,9 +1,14 @@
 import { test as base } from '@playwright/test';
-import { HomePage, LoginPage } from '../pages';
+import { 
+  HomePage, 
+  LoginPage, 
+  SecureAreaPage
+} from '../pages';
 
 type TestFixtures = {
   homePage: HomePage;
   loginPage: LoginPage;
+  secureAreaPage: SecureAreaPage;
 };
 
 export const test = base.extend<TestFixtures>({
@@ -15,6 +20,11 @@ export const test = base.extend<TestFixtures>({
   loginPage: async ({ page }, use) => {
     const loginPage = new LoginPage(page);
     await use(loginPage);
+  },
+
+  secureAreaPage: async ({ page }, use) => {
+    const secureAreaPage = new SecureAreaPage(page);
+    await use(secureAreaPage);
   },
 });
 

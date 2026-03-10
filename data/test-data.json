@@ -12,7 +12,8 @@
   "messages": {
     "loginSuccess": "You logged into a secure area!",
     "loginFailure": "Your username is invalid!",
-    "logoutSuccess": "You logged out of the secure area!"
+    "logoutSuccess": "You logged out of the secure area!",
+    "secureAreaWelcome": "Welcome to the Secure Area"
   },
   "alerts": {
     "jsAlert": "I am a JS Alert",
