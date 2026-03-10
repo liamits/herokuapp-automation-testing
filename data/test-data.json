@@ -1,0 +1,22 @@
+{
+  "users": {
+    "valid": {
+      "username": "tomsmith",
+      "password": "SuperSecretPassword!"
+    },
+    "invalid": {
+      "username": "invaliduser",
+      "password": "wrongpassword"
+    }
+  },
+  "messages": {
+    "loginSuccess": "You logged into a secure area!",
+    "loginFailure": "Your username is invalid!",
+    "logoutSuccess": "You logged out of the secure area!"
+  },
+  "alerts": {
+    "jsAlert": "I am a JS Alert",
+    "jsConfirm": "I am a JS Confirm",
+    "jsPrompt": "I am a JS prompt"
+  }
+}
