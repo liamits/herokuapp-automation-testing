@@ -4,11 +4,13 @@ import { BasePage } from './base.page';
 export class HomePage extends BasePage {
   private readonly pageTitle: Locator;
   private readonly formAuthLink: Locator;
+  private readonly addRemoveElementsLink: Locator;
 
   constructor(page: Page) {
     super(page, '/');
     this.pageTitle = page.locator('h1');
     this.formAuthLink = page.locator('a[href="/login"]');
+    this.addRemoveElementsLink = page.locator('a[href="/add_remove_elements/"]');
   }
 
   async getPageTitle(): Promise<string> {
@@ -17,5 +19,9 @@ export class HomePage extends BasePage {
 
   async clickFormAuthentication(): Promise<void> {
     await this.formAuthLink.click();
+  }
+
+  async clickAddRemoveElements(): Promise<void> {
+    await this.addRemoveElementsLink.click();
   }
 }
