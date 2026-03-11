@@ -3,7 +3,8 @@ import {
   HomePage, 
   LoginPage, 
   SecureAreaPage,
-  AddRemoveElementsPage
+  AddRemoveElementsPage,
+  CheckboxesPage
 } from '../pages';
 
 type TestFixtures = {
@@ -11,6 +12,7 @@ type TestFixtures = {
   loginPage: LoginPage;
   secureAreaPage: SecureAreaPage;
   addRemoveElementsPage: AddRemoveElementsPage;
+  checkboxesPage: CheckboxesPage;
 };
 
 export const test = base.extend<TestFixtures>({
@@ -32,6 +34,11 @@ export const test = base.extend<TestFixtures>({
   addRemoveElementsPage: async ({ page }, use) => {
     const addRemoveElementsPage = new AddRemoveElementsPage(page);
     await use(addRemoveElementsPage);
+  },
+
+  checkboxesPage: async ({ page }, use) => {
+    const checkboxesPage = new CheckboxesPage(page);
+    await use(checkboxesPage);
   },
 });
 
