@@ -6,6 +6,7 @@ export class HomePage extends BasePage {
   private readonly formAuthLink: Locator;
   private readonly addRemoveElementsLink: Locator;
   private readonly checkboxesLink: Locator;
+  private readonly dropdownLink: Locator;
 
   constructor(page: Page) {
     super(page, '/');
@@ -13,6 +14,7 @@ export class HomePage extends BasePage {
     this.formAuthLink = page.locator('a[href="/login"]');
     this.addRemoveElementsLink = page.locator('a[href="/add_remove_elements/"]');
     this.checkboxesLink = page.locator('a[href="/checkboxes"]');
+    this.dropdownLink = page.locator('a[href="/dropdown"]');
   }
 
   async getPageTitle(): Promise<string> {
@@ -29,5 +31,9 @@ export class HomePage extends BasePage {
 
   async clickCheckboxes(): Promise<void> {
     await this.checkboxesLink.click();
+  }
+
+  async clickDropdown(): Promise<void> {
+    await this.dropdownLink.click();
   }
 }
