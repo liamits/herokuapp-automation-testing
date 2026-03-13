@@ -5,3 +5,4 @@ export { SecureAreaPage } from './secure-area.page';
 export { AddRemoveElementsPage } from './add-remove-elements.page';
 export { CheckboxesPage } from './checkboxes.page';
 export { DropdownPage } from './dropdown.page';
+export { JavaScriptAlertsPage } from './javascript-alerts.page';
