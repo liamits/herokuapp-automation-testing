@@ -1,0 +1,3 @@
+This is a sample text file for testing file upload functionality.
+It contains multiple lines of text to verify the upload process works correctly.
+Test automation with Playwright is awesome!

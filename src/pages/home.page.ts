@@ -8,6 +8,7 @@ export class HomePage extends BasePage {
   private readonly checkboxesLink: Locator;
   private readonly dropdownLink: Locator;
   private readonly jsAlertsLink: Locator;
+  private readonly fileUploadLink: Locator;
 
   constructor(page: Page) {
     super(page, '/');
@@ -17,6 +18,7 @@ export class HomePage extends BasePage {
     this.checkboxesLink = page.locator('a[href="/checkboxes"]');
     this.dropdownLink = page.locator('a[href="/dropdown"]');
     this.jsAlertsLink = page.locator('a[href="/javascript_alerts"]');
+    this.fileUploadLink = page.locator('a[href="/upload"]');
   }
 
   async getPageTitle(): Promise<string> {
@@ -41,5 +43,9 @@ export class HomePage extends BasePage {
 
   async clickJavaScriptAlerts(): Promise<void> {
     await this.jsAlertsLink.click();
+  }
+
+  async clickFileUpload(): Promise<void> {
+    await this.fileUploadLink.click();
   }
 }

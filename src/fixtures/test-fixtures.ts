@@ -6,7 +6,8 @@ import {
   AddRemoveElementsPage,
   CheckboxesPage,
   DropdownPage,
-  JavaScriptAlertsPage
+  JavaScriptAlertsPage,
+  FileUploadPage
 } from '../pages';
 
 type TestFixtures = {
@@ -17,6 +18,7 @@ type TestFixtures = {
   checkboxesPage: CheckboxesPage;
   dropdownPage: DropdownPage;
   jsAlertsPage: JavaScriptAlertsPage;
+  fileUploadPage: FileUploadPage;
 };
 
 export const test = base.extend<TestFixtures>({
@@ -53,6 +55,11 @@ export const test = base.extend<TestFixtures>({
   jsAlertsPage: async ({ page }, use) => {
     const jsAlertsPage = new JavaScriptAlertsPage(page);
     await use(jsAlertsPage);
+  },
+
+  fileUploadPage: async ({ page }, use) => {
+    const fileUploadPage = new FileUploadPage(page);
+    await use(fileUploadPage);
   },
 });
 

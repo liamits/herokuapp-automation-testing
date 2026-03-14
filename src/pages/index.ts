@@ -6,3 +6,4 @@ export { AddRemoveElementsPage } from './add-remove-elements.page';
 export { CheckboxesPage } from './checkboxes.page';
 export { DropdownPage } from './dropdown.page';
 export { JavaScriptAlertsPage } from './javascript-alerts.page';
+export { FileUploadPage } from './file-upload.page';
